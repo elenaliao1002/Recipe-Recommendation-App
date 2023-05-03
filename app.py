@@ -72,7 +72,7 @@ if selected == "What's on your plate":
             st.image(inferred_img, use_column_width=True, channels="BGR")
             # remove when inference is done
             my_bar.empty()
-            inferred_label = [label['class'] for label in labels if label['class'] not None]
+            inferred_label = [label['class'] for label in labels if label['class']]
 
         if inferred_label not in st.session_state:
             st.session_state.inferred_label = inferred_label
