@@ -68,11 +68,11 @@ if selected == "What's on your plate":
                 inferred_img, labels = image_processing(img, model)
                 for percent_complete in range(100):
                     time.sleep(0.1)
-                    my_bar.progress(percent_complete + 1, label="Inference in progress")
+                    my_bar.progress(percent_complete + 1)
             st.image(inferred_img, use_column_width=True, channels="BGR")
             # remove when inference is done
             my_bar.empty()
-            inferred_label = [label['class'] for label in labels]
+            inferred_label = [label['class'] for label in labels if label['class'] not None]
 
         if inferred_label not in st.session_state:
             st.session_state.inferred_label = inferred_label
