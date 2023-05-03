@@ -68,7 +68,7 @@ if selected == "What's on your plate":
                 inferred_img, labels = image_processing(img, model)
                 for percent_complete in range(100):
                     time.sleep(0.1)
-                    my_bar.progress(percent_complete + 1)
+                    my_bar.progress(percent_complete + 1, label="Inference in progress")
             st.image(inferred_img, use_column_width=True, channels="BGR")
             # remove when inference is done
             my_bar.empty()
