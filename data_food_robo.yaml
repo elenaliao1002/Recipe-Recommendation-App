@@ -1,0 +1,5 @@
+train: ../food_roboflow_data/train/images
+val: ../food_roboflow_data/valid/images
+
+nc: 5
+names: ['banana', 'pizza', 'salad', 'spaghetti', 'white rice']
