@@ -59,7 +59,7 @@ if selected == "What's on your plate":
 
         with col2:
             st.write('Inferenced image :hammer_and_wrench:')
-            model = YOLO('/Users/Elena/Downloads/best123.pt')
+            model = YOLO('best123.pt')
             img = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
             progress_text = "Inference in progress. Please wait."
             # remove when inference is done
