@@ -4,16 +4,10 @@ on:
   push:
     branches:
       - main
-
-#   schedule:
-#       # run at 8am every Wendsday
-#       - cron: "00 15 */3 * *" 
-        
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner
 
@@ -27,9 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-          
       - name: execute py script # run main.py
         uses: datapane/build-action@v2
-
         with:
           script: "app.py"
